@@ -1,4 +1,4 @@
-import {Drawer, Button, Container} from "@mui/material";
+import {Drawer, Container} from "@mui/material";
 import {useIsOpen} from "../../hooks/isOpen";
 
 // components
@@ -24,27 +24,6 @@ export function ShoppingList() {
         </div>
         <p className="text-[#828282]">Fruits & vegtables</p>
         <GroceryItem itemName="Tomato" quanity={3} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
         <GroceryItem itemName="Apple" quanity={7} />
         <GroceryItem itemName="Apple" quanity={7} />
         <GroceryItem itemName="Apple" quanity={7} />

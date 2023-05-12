@@ -1,6 +1,7 @@
-import {Drawer, Avatar, Button} from "@mui/material";
+import {Drawer} from "@mui/material";
 import {UserPic} from "./UserPic";
 import {Navigation} from "./Navigation";
+import { CartButton } from "./CartButton";
 
 export function Sidemenu() {
   return (
@@ -9,9 +10,7 @@ export function Sidemenu() {
         <UserPic />
         <Navigation />
         {/* controls shopping list */}
-        <Button>
-          <Avatar className="mb-4" />
-        </Button>
+       <CartButton />
       </div>
     </Drawer>
   );

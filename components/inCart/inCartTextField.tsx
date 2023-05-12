@@ -6,7 +6,7 @@ export function NameListTextField() {
       <TextField
         placeholder="Enter a name"
         className="w-72 rounded"
-        sx={{border: "orange 2px solid"}}
+        sx={{border: "#F9A109 2px solid"}}
       />
     </div>
   );
