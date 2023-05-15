@@ -7,7 +7,7 @@ import {GroceryItem} from "./GroceryItem";
 import { NameListTextField } from "./inCartTextField";
 
 export function ShoppingList() {
-  const showing = useIsOpen(false);
+  const showing = useIsOpen();
   return (
     <Drawer
       open={showing.isShowing}
@@ -15,6 +15,7 @@ export function ShoppingList() {
       anchor="right"
       PaperProps={{sx: {width: "389px", bgcolor: "#FFF0DE", boxShadow: 0}}}
       className="relative overflow-hidden"
+      variant="persistent"
     >
       <AddItem />
       <Container>

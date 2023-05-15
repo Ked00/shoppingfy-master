@@ -20,7 +20,7 @@ export default function Items() {
 
       <div className="mt-5">
         <h4>Fruits and vegetables</h4>
-        <Row className="w-3/4 my-5" >
+        <Row className="w-3/4 my-5">
           <Col xs={4} className="mb-3">
             <ItemCard item="Avocado" category="Fruits and vegetables" />
           </Col>
@@ -46,7 +46,38 @@ export default function Items() {
             <ItemCard item="Watermelon" category="Fruits and vegetables" />
           </Col>
         </Row>
+
         <h4>Meat and Fish</h4>
+        <Row className="w-3/4 my-5">
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Chicken leg box" category="Meat and Fish" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Chicken 1kg" category="Meat and Fish" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Pork fillets 450g" category="Meat and Fish" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Salmon 1kg" category="Meat and Fish" />
+          </Col>
+        </Row>
+
+        <h4>Beverages</h4>
+        <Row className="w-3/4 my-5">
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Fruit Punch" category="Beverages" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Root Beer" category="Beverages" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Water" category="Beverages" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Orange Juice" category="Beverages" />
+          </Col>
+        </Row>
       </div>
     </div>
   );
