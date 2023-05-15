@@ -7,7 +7,7 @@ import {GroceryItem} from "./GroceryItem";
 import { NameListTextField } from "./inCartTextField";
 
 export function ShoppingList() {
-  const showing = useIsOpen();
+  const showing = useIsOpen(false);
   return (
     <Drawer
       open={showing.isShowing}

@@ -5,7 +5,7 @@ type outPut = {
   reverseShowing: () => void;
 };
 
-export function useIsOpen(show = true): outPut {
+export function useIsOpen(show = true ): outPut {
   const [isShowing, setIsShowing] = useState(show);
 
   function reverseShowing() {

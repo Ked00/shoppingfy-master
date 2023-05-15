@@ -1,6 +1,7 @@
 "use client";
 import {Input} from "@mui/joy";
-import {ItemCard} from "../../../components/itemCards/itemCard";
+import {ItemCard} from "../../../components/itemCards/ItemCard";
+import {Row, Col} from "react-bootstrap";
 
 export default function Items() {
   return (
@@ -18,15 +19,34 @@ export default function Items() {
       </div>
 
       <div className="mt-5">
-        <h4 className="mt-3">Fruits and vegetables</h4>
-        <ItemCard item="Avocado" category="Fruits and vegetables" />
-        <ItemCard item="Banana" category="Fruits and vegetables" />
-        <ItemCard item="Bunch of carrots 5pcs" category="Fruits and vegetables" />
-        <ItemCard item="Chicken 1kg" category="Fruits and vegetables" />
-        <ItemCard item="Pre-cooked corn 450g" category="Fruits and vegetables" />
-        <ItemCard item="Mandarin Nadorcott" category="Fruits and vegetables" />
-        <ItemCard item="Piele De Sapo Melon" category="Fruits and vegetables" />
-        <ItemCard item="Watermelon" category="Fruits and vegetables" />
+        <h4>Fruits and vegetables</h4>
+        <Row className="w-3/4 my-5" >
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Avocado" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Banana" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Bunch of carrots 5pcs" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Chicken 1kg" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Pre-cooked corn 450g" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4} className="mb-3">
+            <ItemCard item="Mandarin Nadorcott" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4}>
+            <ItemCard item="Piele De Sapo Melon" category="Fruits and vegetables" />
+          </Col>
+          <Col xs={4}>
+            <ItemCard item="Watermelon" category="Fruits and vegetables" />
+          </Col>
+        </Row>
+        <h4>Meat and Fish</h4>
       </div>
     </div>
   );
