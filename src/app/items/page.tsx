@@ -3,6 +3,7 @@ import {Input} from "@mui/joy";
 import {ItemCard} from "../../../components/itemCards/ItemCard";
 import {Row, Col} from "react-bootstrap";
 
+// add tooltips
 export default function Items() {
   return (
     <div className="container p-5">
