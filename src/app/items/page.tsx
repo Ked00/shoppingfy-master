@@ -1,6 +1,6 @@
 "use client";
 import {Input} from "@mui/joy";
-import {ItemCard} from "../../../components/itemCards/ItemCard";
+import {ItemCard} from "../../../components/ItemCard";
 import {Row, Col} from "react-bootstrap";
 
 // add tooltips
