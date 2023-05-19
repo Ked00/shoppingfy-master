@@ -15,7 +15,7 @@ export function ShoppingList() {
       anchor="right"
       PaperProps={{sx: {width: "389px", bgcolor: "#FFF0DE", boxShadow: 0}}}
       className="relative overflow-hidden"
-      variant="persistent"
+      variant="permanent"
     >
       <AddItem />
       <Container>
