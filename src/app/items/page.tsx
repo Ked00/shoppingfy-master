@@ -7,19 +7,19 @@ import {Row, Col, Container} from "react-bootstrap";
 export default function Items() {
   return (
     <div>
-      <div className="flex">
-        <h2 className="w-2/4">
-          <span className="text-[#F9A109]">Shoppingify </span>allows you to take your shopping list
-          wherever you go
-        </h2>
-        <Input
-          placeholder="search item"
-          type="search"
-          sx={{width: "275.61px", height: "50.92px"}}
-        />
-      </div>
+      <Container className="p-5">
+        <div className="flex">
+          <h2 className="w-2/4">
+            <span className="text-[#F9A109]">Shoppingify </span>allows you to take your shopping
+            list wherever you go
+          </h2>
+          <Input
+            placeholder="search item"
+            type="search"
+            sx={{width: "275.61px", height: "50.92px"}}
+          />
+        </div>
 
-      <Container className="p-xs-12">
         <div className="mt-5">
           <h4>Fruits and vegetables</h4>
           <Row className="w-3/4 my-5">
