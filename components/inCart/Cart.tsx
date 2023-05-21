@@ -1,10 +1,11 @@
-import {Drawer, Container} from "@mui/material";
+import {Drawer} from "@mui/material";
 import {useIsOpen} from "../../hooks/isOpen";
 
 // components
 import {AddItem} from "./AddItem";
 import {GroceryItem} from "./GroceryItem";
-import { NameListTextField } from "./inCartTextField";
+import {NameListTextField} from "./inCartTextField";
+import {AddNewItem} from "../sidemenu/AddNewItem";
 
 export function ShoppingList() {
   const showing = useIsOpen();
@@ -13,23 +14,17 @@ export function ShoppingList() {
       open={showing.isShowing}
       hideBackdrop={true}
       anchor="right"
-      PaperProps={{sx: {width: "389px", bgcolor: "#FFF0DE", boxShadow: 0}}}
+      PaperProps={{sx: {width: "389px", bgcolor: "#FAFAFA", boxShadow: 0}}}
       className="relative overflow-hidden"
       variant="permanent"
     >
-      <AddItem />
-      <Container>
-        <div className="flex justify-between align-items-center my-5">
+      {/* <AddItem />
+        <div className="flex justify-between align-items-center my-5 container">
           <h2 className="ms-3">Shopping List</h2>
           <img src={require("../../public/edit.png")} />
         </div>
-        <p className="text-[#828282]">Fruits & vegtables</p>
-        <GroceryItem itemName="Tomato" quanity={3} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-        <GroceryItem itemName="Apple" quanity={7} />
-      </Container>
-      <NameListTextField />
+      <NameListTextField /> */}
+      <AddNewItem />
     </Drawer>
   );
 }
