@@ -20,7 +20,7 @@ export function ShoppingList() {
       variant="permanent"
     >
       {newItemMenu.isShowing ? (
-        <ItemsList addingItem={newItemMenu.reverseShowing} />
+        <ItemsList menuStatus={newItemMenu.reverseShowing} />
       ) : (
         <AddNewItem backToCart={newItemMenu.reverseShowing} />
       )}

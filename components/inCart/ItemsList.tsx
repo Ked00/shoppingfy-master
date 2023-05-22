@@ -1,19 +1,25 @@
-import {AddItem} from "./AddItem";
+import {useState} from "react";
+import {AddItemBanner} from "./AddItemBanner";
 import {NameListTextField} from "./inCartTextField";
 
+import {useUpdateInputValue} from "../../hooks/UpdateInputValue";
+
 type Props = {
-    addingItem: ()=> void
-}
+  menuStatus: () => void;
+};
 
 export function ItemsList(props: Props) {
+  const [cartName, setCartName] = useState("");
+  const controlInput = useUpdateInputValue();
+
   return (
     <>
-      <AddItem addItem={props.addingItem} />
+      <AddItemBanner menuStatus={props.menuStatus} />
       <div className="flex justify-between align-items-center my-5 container">
-        <h2 className="ms-3">Shopping List</h2>
+        <h2 className="ms-3">{cartName}</h2>
         <img src={require("../../public/edit.png")} />
       </div>
-      <NameListTextField />
+      <NameListTextField updateInput={controlInput.updateInput}/>
     </>
   );
 }

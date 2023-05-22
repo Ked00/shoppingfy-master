@@ -6,7 +6,7 @@ type Props = {
   className: string;
 };
 
-export function InputWithLabel(props: Props) {
+export function TextInputWithLabel(props: Props) {
   return (
     <FormControl>
       <FormLabel>{props.label}</FormLabel>

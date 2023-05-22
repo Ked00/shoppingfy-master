@@ -1,5 +1,5 @@
 import {FormControl, FormLabel, Select, Option, Button} from "@mui/joy";
-import {InputWithLabel} from "../Inputs/InputWithLabel";
+import {TextInputWithLabel} from "../Inputs/TextInputWithLabel";
 
 type Props = {
   backToCart: () => void;
@@ -10,13 +10,13 @@ export function AddNewItem(props: Props) {
     <div className="container p-3 h-full relative">
       <h3>Add a new item</h3>
       <form className="mt-3 p-3">
-        <InputWithLabel label="Name" placeHolder="Enter a name" className="p-3 mb-2" />
-        <InputWithLabel
+        <TextInputWithLabel label="Name" placeHolder="Enter a name" className="p-3 mb-2" />
+        <TextInputWithLabel
           label="Note (optional)"
           placeHolder="Enter a note"
           className="p-14 mb-3 text-left"
         />
-        <InputWithLabel label="image (optional)" placeHolder="Enter a url" className="p-3 mb-4" />
+        <TextInputWithLabel label="image (optional)" placeHolder="Enter a url" className="p-3 mb-4" />
         <FormControl>
           <FormLabel>Category</FormLabel>
           <Select placeholder="Enter a category">
