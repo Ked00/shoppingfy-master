@@ -2,29 +2,28 @@ import {Drawer} from "@mui/material";
 import {useIsOpen} from "../../hooks/isOpen";
 
 // components
-import {AddItem} from "./AddItem";
-import {GroceryItem} from "./GroceryItem";
-import {NameListTextField} from "./inCartTextField";
 import {AddNewItem} from "../sidemenu/AddNewItem";
+import {ItemsList} from "./ItemsList";
 
 export function ShoppingList() {
-  const showing = useIsOpen();
+  const showDrawer = useIsOpen(false);
+  const newItemMenu = useIsOpen();
+  const bgColor = newItemMenu.isShowing ? "#FFF0DE": "#FAFAFA";
+
   return (
     <Drawer
-      open={showing.isShowing}
+      open={showDrawer.isShowing}
       hideBackdrop={true}
       anchor="right"
-      PaperProps={{sx: {width: "389px", bgcolor: "#FAFAFA", boxShadow: 0}}}
+      PaperProps={{sx: {width: "389px", bgcolor: bgColor, boxShadow: 0, border: "0"}}}
       className="relative overflow-hidden"
       variant="permanent"
     >
-      {/* <AddItem />
-        <div className="flex justify-between align-items-center my-5 container">
-          <h2 className="ms-3">Shopping List</h2>
-          <img src={require("../../public/edit.png")} />
-        </div>
-      <NameListTextField /> */}
-      <AddNewItem />
+      {newItemMenu.isShowing ? (
+        <ItemsList addingItem={newItemMenu.reverseShowing} />
+      ) : (
+        <AddNewItem backToCart={newItemMenu.reverseShowing} />
+      )}
     </Drawer>
   );
 }

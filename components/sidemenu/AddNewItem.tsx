@@ -1,7 +1,11 @@
 import {FormControl, FormLabel, Select, Option, Button} from "@mui/joy";
 import {InputWithLabel} from "../Inputs/InputWithLabel";
 
-export function AddNewItem() {
+type Props = {
+  backToCart: () => void;
+};
+
+export function AddNewItem(props: Props) {
   return (
     <div className="container p-3 h-full relative">
       <h3>Add a new item</h3>
@@ -17,14 +21,16 @@ export function AddNewItem() {
           <FormLabel>Category</FormLabel>
           <Select placeholder="Enter a category">
             <Option value="Fruit and vegetables">Fruit and vegetables</Option>
-            <Option value="Fruit and vegetables">Fruit and vegetables</Option>
-            <Option value="Fruit and vegetables">Fruit and vegetables</Option>
-            <Option value="Fruit and vegetables">Fruit and vegetables</Option>
+            <Option value="Meat and Fish">Meat and Fish</Option>
+            <Option value="Beverages">Beverages</Option>
+            <Option value="Snacks">Snacks</Option>
           </Select>
         </FormControl>
       </form>
       <div className="absolute bottom-0 w-full text-center mb-4">
-        <Button variant="plain" className="mr-3 text-black">Cancel</Button>
+        <Button variant="plain" className="mr-3 text-black" onClick={props.backToCart}>
+          Cancel
+        </Button>
         <Button variant="solid">Save</Button>
       </div>
     </div>
