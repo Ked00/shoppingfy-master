@@ -1,5 +1,6 @@
-import {FormControl, FormLabel, Select, Option, Button} from "@mui/joy";
+import {FormControl, FormLabel, Select, Option} from "@mui/joy";
 import {TextInputWithLabel} from "../Inputs/TextInputWithLabel";
+import ActionButtons from "../inCart/ActionButtons";
 
 type Props = {
   backToCart: () => void;
@@ -16,7 +17,11 @@ export function AddNewItem(props: Props) {
           placeHolder="Enter a note"
           className="p-14 mb-3 text-left"
         />
-        <TextInputWithLabel label="image (optional)" placeHolder="Enter a url" className="p-3 mb-4" />
+        <TextInputWithLabel
+          label="image (optional)"
+          placeHolder="Enter a url"
+          className="p-3 mb-4"
+        />
         <FormControl>
           <FormLabel>Category</FormLabel>
           <Select placeholder="Enter a category">
@@ -27,12 +32,7 @@ export function AddNewItem(props: Props) {
           </Select>
         </FormControl>
       </form>
-      <div className="absolute bottom-0 w-full text-center mb-4">
-        <Button variant="plain" className="mr-3 text-black" onClick={props.backToCart}>
-          Cancel
-        </Button>
-        <Button variant="solid">Save</Button>
-      </div>
+      <ActionButtons Button1text="Cancel" Button2text="Save" backToCart={props.backToCart} />
     </div>
   );
 }
