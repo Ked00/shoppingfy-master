@@ -9,12 +9,13 @@ type prop = {
 export function ItemCard(Props: prop) {
   return (
     <Card
-      sx={{width: "230px", height: "60px"}}
+      sx={{width: "230px", height: "60px", cursor: "pointer"}}
       orientation="horizontal"
       className="flex justify-between"
+      
     >
       <p>{Props.item}</p>
-      <AddIcon sx={{color: "#C1C1C4"}} />
+      <AddIcon sx={{color: "#C1C1C4"}} cursor="pointer"/>
     </Card>
   );
 }

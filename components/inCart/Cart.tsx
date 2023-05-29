@@ -4,26 +4,35 @@ import {useIsOpen} from "../../hooks/isOpen";
 // components
 import {AddNewItem} from "../sidemenu/AddNewItem";
 import {ItemsList} from "./ItemsList";
+import {ItemInfo} from "./ItemInfo";
 
 export function ShoppingList() {
-  const showDrawer = useIsOpen(false);
-  const newItemMenu = useIsOpen();
-  const bgColor = newItemMenu.isShowing ? "#FFF0DE": "#FAFAFA";
+  const newItemMenu = useIsOpen(false);
+  const itemInfo = useIsOpen(false);
+  // const bgColor = itemList.isShowing ? "#FFF0DE" : "#FAFAFA";
+
+  const showItemInfo = () => {
+    newItemMenu.setShowingState(false);
+    itemInfo.setShowingState(true);
+  };
+
+  const showMenu = () => {
+    itemInfo.setShowingState(false);
+    newItemMenu.setShowingState(true);
+  };
 
   return (
     <Drawer
-      open={showDrawer.isShowing}
+      open={true}
       hideBackdrop={true}
       anchor="right"
-      PaperProps={{sx: {width: "389px", bgcolor: bgColor, boxShadow: 0, border: "0"}}}
+      PaperProps={{sx: {width: "389px", boxShadow: 0, border: "4"}}}
       className="relative overflow-hidden"
-      variant="permanent"
+      variant="persistent"
     >
-      {newItemMenu.isShowing ? (
-        <ItemsList menuStatus={newItemMenu.reverseShowing} />
-      ) : (
-        <AddNewItem backToCart={newItemMenu.reverseShowing} />
-      )}
+      {!itemInfo.isShowing && !newItemMenu.isShowing && <ItemsList menuStatus={newItemMenu.reverseShowing} />}
+      {itemInfo.isShowing && <ItemInfo backToCart={newItemMenu.reverseShowing} />}
+      {newItemMenu.isShowing &&  <AddNewItem backToCart={newItemMenu.reverseShowing} />}
     </Drawer>
   );
 }
